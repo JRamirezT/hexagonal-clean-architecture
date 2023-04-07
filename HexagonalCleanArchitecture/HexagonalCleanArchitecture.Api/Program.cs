@@ -1,17 +1,27 @@
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
+using HexagonalCleanArchitecture.Api.Filtros;
+using HexagonalCleanArchitecture.Infraestructura.Extensiones;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
+const string MyCor = "Mycors";
 
-// Add services to the container.
-//builder.Services.AddMediatR(typeof(Program));
-//builder.Services.AddAutoMapper(Assembly.Load("TiendaServicios.Compras.Application"));
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.Load("HexagonalCleanArchitecture.Applicacion")));
+builder.Services.AddAutoMapper(Assembly.Load("HexagonalCleanArchitecture.Applicacion"));
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.ServiciosDominio();
+
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<UnhandledExceptionFilterAttribute>();
+});
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddCors(options => options.AddPolicy(name: MyCor,
+                         builder => builder.AllowAnyOrigin()
+                                           .AllowAnyMethod()
+                                           .AllowAnyHeader()));
 
 var app = builder.Build();
 
@@ -23,6 +33,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(MyCor);
 
 app.UseAuthorization();
 
