@@ -117,7 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CampoRequerido" xml:space="preserve">
+    <value>El campo {0} es obligatorio</value>
+  </data>
   <data name="VehiculoMarcaNoPermitida" xml:space="preserve">
     <value>La marca del vehiculo {0} no se encuentra permitida.</value>
+  </data>
+  <data name="VehiculoModeloNoValido" xml:space="preserve">
+    <value>El modelo minimo del vehiculo es {0}</value>
+  </data>
+  <data name="VehiculoNoExiste" xml:space="preserve">
+    <value>El vehículo solicitado no existe</value>
   </data>
 </root>

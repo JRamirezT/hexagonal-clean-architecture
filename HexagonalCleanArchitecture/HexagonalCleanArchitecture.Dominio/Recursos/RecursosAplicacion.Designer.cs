@@ -61,11 +61,38 @@ namespace HexagonalCleanArchitecture.Dominio.Recursos {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to El campo {0} es obligatorio.
+        /// </summary>
+        internal static string CampoRequerido {
+            get {
+                return ResourceManager.GetString("CampoRequerido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to La marca del vehiculo {0} no se encuentra permitida..
         /// </summary>
         internal static string VehiculoMarcaNoPermitida {
             get {
                 return ResourceManager.GetString("VehiculoMarcaNoPermitida", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to El modelo minimo del vehiculo es {0}.
+        /// </summary>
+        internal static string VehiculoModeloNoValido {
+            get {
+                return ResourceManager.GetString("VehiculoModeloNoValido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to El vehículo solicitado no existe.
+        /// </summary>
+        internal static string VehiculoNoExiste {
+            get {
+                return ResourceManager.GetString("VehiculoNoExiste", resourceCulture);
             }
         }
     }

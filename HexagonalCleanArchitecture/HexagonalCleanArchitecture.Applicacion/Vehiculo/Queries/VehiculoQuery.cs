@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HexagonalCleanArchitecture.Applicacion.Vehiculo.Dto;
+using MediatR;
 
 namespace HexagonalCleanArchitecture.Applicacion.Vehiculo.Queries;
 
-public class VehiculoQuery
-{
-}
-
+public record VehiculoQuery(Guid Id) : IRequest<VehiculoDto>;
