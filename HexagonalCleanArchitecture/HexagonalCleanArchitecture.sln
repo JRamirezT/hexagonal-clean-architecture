@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HexagonalCleanArchitecture.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{5360C328-C23F-47BE-8F2D-7CB95924EEF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexagonalCleanArchitecture.Dominio.Test", "HexagonalCleanArchitecture.Dominio.Test\HexagonalCleanArchitecture.Dominio.Test.csproj", "{43034F96-4E95-4489-84C1-5F0A7CD67FE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HexagonalCleanArchitecture.Dominio.Test", "HexagonalCleanArchitecture.Dominio.Test\HexagonalCleanArchitecture.Dominio.Test.csproj", "{43034F96-4E95-4489-84C1-5F0A7CD67FE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexagonalCleanArchitecture.Api.Test", "HexagonalCleanArchitecture.Api.Test\HexagonalCleanArchitecture.Api.Test.csproj", "{A2FD0EF6-269C-44B9-9B97-551259E509DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,12 +43,17 @@ Global
 		{43034F96-4E95-4489-84C1-5F0A7CD67FE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43034F96-4E95-4489-84C1-5F0A7CD67FE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43034F96-4E95-4489-84C1-5F0A7CD67FE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2FD0EF6-269C-44B9-9B97-551259E509DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2FD0EF6-269C-44B9-9B97-551259E509DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2FD0EF6-269C-44B9-9B97-551259E509DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2FD0EF6-269C-44B9-9B97-551259E509DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{43034F96-4E95-4489-84C1-5F0A7CD67FE5} = {5360C328-C23F-47BE-8F2D-7CB95924EEF5}
+		{A2FD0EF6-269C-44B9-9B97-551259E509DB} = {5360C328-C23F-47BE-8F2D-7CB95924EEF5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FB77E029-7D62-4AF7-828B-12757EAA1D45}
