@@ -6,13 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HexagonalCleanArchitecture.Api.Controllers;
 
-[Route("api/automovil")]
+[Route("api/vehiculo")]
 [ApiController]
-public class AutomovilController : ControllerBase
+public class VehiculoController : ControllerBase
 {
     readonly IMediator _mediator;
 
-    public AutomovilController(IMediator mediator) => _mediator = mediator;
+    public VehiculoController(IMediator mediator) => _mediator = mediator;
 
     [HttpPost]
     public async Task CrearAutomovil(VehiculoCommand vehiculo) => await _mediator.Send(vehiculo);
