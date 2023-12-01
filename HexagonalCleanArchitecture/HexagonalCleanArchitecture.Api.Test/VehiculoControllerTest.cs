@@ -87,4 +87,22 @@ public class VehiculoControllerTest
         Assert.Equal(vehiculo.Marca, command.Marca);
         Assert.Equal(vehiculo.TipoVehiculo, command.TipoVehiculo);
     }
+
+    [Fact]
+    public async Task Eliminar_Automovil_Exitoso()
+    {
+        //Arrange
+        var idVehiculo = new Guid("46f70633-4496-4124-bc76-ce9f7c073ee0");
+
+        //Act
+        var httpResponse = await _client.DeleteAsync($"{API_BASE}?Id={idVehiculo}");
+
+        using var scope = _apiAppBuilder.Services.CreateScope();
+        var repository = scope.ServiceProvider.GetRequiredService<IGenericRepository<Vehiculo>>();
+        var vehiculo = await repository.GetByIdAsync(idVehiculo);
+
+        //Assert
+        Assert.Equal(HttpStatusCode.OK, httpResponse.StatusCode);
+        Assert.Null(vehiculo);
+    }
 }

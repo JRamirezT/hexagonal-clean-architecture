@@ -50,6 +50,20 @@ Recuerda, el dominio no conoce a Nadie es el solo e independiente.
 #### **Infraestructura**
 
 Capa en la que encontraremos las conexiones a Base de Datos, Conexiones externas y/o librerias externas que deseemos usar, como por ejemplo Servicios de Mensajeria o librerias de creación de archivos Pdf's o Excel.
+
+
+#### **Api.Test**
+
+Capa en la que encontramos todo lo relacionado con las pruebas de integración del proyecto, recordemos que la idea de las pruebas de integración es realizar la prueba de punta a punta con todos los componentes que interactuan el endpoint, es decir aqui es donde todos los componentes interactuan de manera integral, bases de datos, volumenes, web services externos etc etc.
+
+Algo que debemos tener presente es que estas pruebas son muy costosas en cuanto a rendimiento, por eso la recomendación es realizar solo el escenario feliz el endpoint.
+
+#### **Dominio.Test**
+
+Capa en la que encontramos todo lo relacionado con las pruebas de integración unitarias del proyecto pero enfocado solo a la capa de dominio.
+
+De acuerdo a la estructura del proyecto toda nuestra logica de la aplicación esta en la capa de dominio, es decir que en estas pruebas ejecutamos todos los escenarios que abarcan los métodos del dominio, por ejemplo: Podemos tener un método donde por una serie de validaciones pueden retornar diferentes excepciones, en este caso para ese solo método debemos ejecutar las 'N*' pruebas que sean necesarias que cubran todos los escenarios.
+
 ## **Recursos:**
 
 A continuación relaciono los recursos en los cuales me he basado para la construcción del proyecto.
@@ -69,13 +83,27 @@ A continuación relaciono los recursos en los cuales me he basado para la constr
 #### **Personalización tabla de migración**
 - [Migratión](https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/history-table)
 
+
 #### **Entendimiento del Tacking de una entidad**
 
 Este apartado me parece importante incluirlo para que puedan entender porque se configura el tracking en las entidades de la Base de datos
 - [Tracking](https://learn.microsoft.com/en-us/ef/core/querying/tracking)
 
+## **Pruebas:**
+
+#### **Entendimiento de Pruebas**
+
+Este apartado me parece importante incluirlo para que puedan tener una introducción a las pruebas y sus tipos de pruebas si no se encuentran familiarizados con el tema
+- [Testing](https://learn.microsoft.com/es-es/dotnet/core/testing/)
+
 #### **Actualización de Fechas para postgresql**
 - [Fechas en postgresql](https://www.npgsql.org/doc/types/datetime.html)
+
+#### **Pruebas Unitarias**
+- [Prueba unitaria de C#](https://learn.microsoft.com/es-es/dotnet/core/testing/unit-testing-with-dotnet-test)
+
+#### **Pruebas de Integración**
+- [Pruebas de integración en ASP.NET Core](https://learn.microsoft.com/es-es/aspnet/core/test/integration-tests?view=aspnetcore-6.0)
 
 ## **Importante:**
 
@@ -85,4 +113,9 @@ Fecha inicio fase I - 4 Abril 2023
 
 Fecha fin fase I - 23 de Abril 2023
 
-La idea es continuar con Fases posteriores las cuales contemplaran, pruebas unitarias, pruebas de Integración, conexiónes a Azure o Aws (Aun esta pendiente la decisión)
+
+La Fase II del proyecto corresponde a la creación de las pruebas unitarias e integración del proyecto
+
+Fecha fin fase II - 01 de Diciembre 2023
+
+La idea es continuar con Fases posteriores las cuales contemplaran, conexiónes a Azure o Aws (Aun esta pendiente la decisión)
