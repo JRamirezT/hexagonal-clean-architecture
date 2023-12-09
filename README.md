@@ -60,7 +60,7 @@ Algo que debemos tener presente es que estas pruebas son muy costosas en cuanto 
 
 #### **Dominio.Test**
 
-Capa en la que encontramos todo lo relacionado con las pruebas de integración unitarias del proyecto pero enfocado solo a la capa de dominio.
+Capa en la que encontramos todo lo relacionado con las pruebas unitarias del proyecto pero enfocado solo a la capa de dominio.
 
 De acuerdo a la estructura del proyecto toda nuestra logica de la aplicación esta en la capa de dominio, es decir que en estas pruebas ejecutamos todos los escenarios que abarcan los métodos del dominio, por ejemplo: Podemos tener un método donde por una serie de validaciones pueden retornar diferentes excepciones, en este caso para ese solo método debemos ejecutar las 'N*' pruebas que sean necesarias que cubran todos los escenarios.
 
