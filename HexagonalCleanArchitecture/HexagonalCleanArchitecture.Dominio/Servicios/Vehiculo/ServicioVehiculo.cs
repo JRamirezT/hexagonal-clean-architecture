@@ -33,6 +33,7 @@ public class ServicioVehiculo
         vehiculoBd.Marca = vehiculo.Marca;
         vehiculoBd.Color = vehiculo.Color;
         vehiculoBd.Modelo = vehiculo.Modelo;
+        vehiculoBd.TipoVehiculo = vehiculo.TipoVehiculo;
 
         await Actualizar(vehiculoBd);
     }

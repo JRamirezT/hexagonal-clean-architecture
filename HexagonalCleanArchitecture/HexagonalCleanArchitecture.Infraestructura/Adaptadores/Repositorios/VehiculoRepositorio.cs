@@ -24,7 +24,7 @@ public class VehiculoRepositorio : IVehiculoRepositorio
         await _repositorio.DeleteAsync(entidad);
     }
 
-    public async Task<Vehiculo> GetByIdAsync(object id)
+    public async Task<Vehiculo?> GetByIdAsync(object id)
     {
         return await _repositorio.GetByIdAsync(id);
     }
